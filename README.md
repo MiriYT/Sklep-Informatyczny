@@ -12,7 +12,7 @@ Widok klienci_ktorzy_dali_ocene_5 pokazuje jacy klienci dali ocene =5; <br>
 Widok pracownik_od_komputerow pokazuje pracowników którzy zajmują się naprawą komputerów; <br>
 Widok slabe_opinie pokazuje oceny klientów <=3; <br>
 <br>
-Baza posiada trzech użytkowników:
+Baza posiada trzech użytkowników: <br>
 worker-Pracownik który może usuwać, tworzyc, edytować oraz kasować dane aczkolwiek zależy od wymagań tabeli; <br>
 client- większość tabel może przeglądać za wyjątkiem takich z danymi wrażliwymi(np: pracownicy) oraz ma możliwość wpisywania recenzji; <br>
 postgres-może wszystko, jest administratorem bazy; <br>
