@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict G3uYlaaaXLkFc83Ih2QIifJ3JuZ6LBMjNFg8deRAZMcMLrUAa20Dkbo1Vn2kb4a
+
 
 -- Dumped from database version 18.0
 -- Dumped by pg_dump version 18.0
 
--- Started on 2025-11-06 14:23:05
+-- Started on 2025-11-12 08:28:12
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -26,7 +26,6 @@ SET row_security = off;
 -- Name: public; Type: SCHEMA; Schema: -; Owner: pg_database_owner
 --
 
-CREATE SCHEMA public;
 
 
 ALTER SCHEMA public OWNER TO pg_database_owner;
@@ -331,15 +330,13 @@ ALTER TABLE ONLY public.zamowienia ALTER COLUMN idzamowienia SET DEFAULT nextval
 -- Data for Name: klienci; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.klienci (idklienta, imie, nazwisko, telefon) FROM stdin;
-1	Jan	Kowalski	123456789
-2	Anna	Nowak	987654321
-3	Piotr	Zielinski	456789123
-4	Maria	Wiśniewska	321654987
-5	Tomasz	Szymański	741258963
-6	Karolina	Lewandowska	852963741
-7	Marek	Kamiński	369258147
-\.
+INSERT INTO public.klienci VALUES (1, 'Jan', 'Kowalski', '123456789');
+INSERT INTO public.klienci VALUES (2, 'Anna', 'Nowak', '987654321');
+INSERT INTO public.klienci VALUES (3, 'Piotr', 'Zielinski', '456789123');
+INSERT INTO public.klienci VALUES (4, 'Maria', 'Wiśniewska', '321654987');
+INSERT INTO public.klienci VALUES (5, 'Tomasz', 'Szymański', '741258963');
+INSERT INTO public.klienci VALUES (6, 'Karolina', 'Lewandowska', '852963741');
+INSERT INTO public.klienci VALUES (7, 'Marek', 'Kamiński', '369258147');
 
 
 --
@@ -348,15 +345,13 @@ COPY public.klienci (idklienta, imie, nazwisko, telefon) FROM stdin;
 -- Data for Name: pracownicy; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.pracownicy (idpracownika, imie, nazwisko, specjalizacja, login) FROM stdin;
-1	Piotr	Wiśniewski	telefony	p.wisniewski
-2	Katarzyna	Zalewska	komputery	k.zalewska
-3	Marek	Nowakowski	rtv	m.nowakowski
-4	Adam	Szczepan	konsole	a.szczepan
-5	Ewa	Stolarz	telefony	e.stolarz
-6	Tomasz	Kowalczyk	komputery	t.kowalczyk
-7	Barbara	Wójcik	rtv	b.wojcik
-\.
+INSERT INTO public.pracownicy VALUES (1, 'Piotr', 'Wiśniewski', 'telefony', 'p.wisniewski');
+INSERT INTO public.pracownicy VALUES (2, 'Katarzyna', 'Zalewska', 'komputery', 'k.zalewska');
+INSERT INTO public.pracownicy VALUES (3, 'Marek', 'Nowakowski', 'rtv', 'm.nowakowski');
+INSERT INTO public.pracownicy VALUES (4, 'Adam', 'Szczepan', 'konsole', 'a.szczepan');
+INSERT INTO public.pracownicy VALUES (5, 'Ewa', 'Stolarz', 'telefony', 'e.stolarz');
+INSERT INTO public.pracownicy VALUES (6, 'Tomasz', 'Kowalczyk', 'komputery', 't.kowalczyk');
+INSERT INTO public.pracownicy VALUES (7, 'Barbara', 'Wójcik', 'rtv', 'b.wojcik');
 
 
 --
@@ -365,15 +360,13 @@ COPY public.pracownicy (idpracownika, imie, nazwisko, specjalizacja, login) FROM
 -- Data for Name: produkty; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.produkty (idproduktu, nazwa, rok_produkcji, cena, dostepnosc) FROM stdin;
-1	iPhone 13	2021	4999.99	dostępne
-2	Dell XPS 13	2022	5499.00	dostępne
-3	Samsung QLED TV	2023	3499.99	dostępne
-4	PS5	2021	2499.00	dostępne
-5	Samsung Galaxy S21	2021	3799.99	dostępne
-6	Lenovo ThinkPad	2023	4999.00	dostępne
-7	LG OLED TV	2023	4999.99	niedostępne
-\.
+INSERT INTO public.produkty VALUES (1, 'iPhone 13', '2021', 4999.99, 'dostępne');
+INSERT INTO public.produkty VALUES (2, 'Dell XPS 13', '2022', 5499.00, 'dostępne');
+INSERT INTO public.produkty VALUES (3, 'Samsung QLED TV', '2023', 3499.99, 'dostępne');
+INSERT INTO public.produkty VALUES (4, 'PS5', '2021', 2499.00, 'dostępne');
+INSERT INTO public.produkty VALUES (5, 'Samsung Galaxy S21', '2021', 3799.99, 'dostępne');
+INSERT INTO public.produkty VALUES (6, 'Lenovo ThinkPad', '2023', 4999.00, 'dostępne');
+INSERT INTO public.produkty VALUES (7, 'LG OLED TV', '2023', 4999.99, 'niedostępne');
 
 
 --
@@ -382,15 +375,13 @@ COPY public.produkty (idproduktu, nazwa, rok_produkcji, cena, dostepnosc) FROM s
 -- Data for Name: recenzje; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.recenzje (idklienta, idproduktu, ocena, komentarz) FROM stdin;
-1	1	5	Świetny telefon, bardzo szybki!
-2	2	4	Bardzo dobra jakość, ale mógłby być tańszy
-3	3	5	Fantastyczny obraz, uwielbiam ten telewizor!
-4	4	3	Działa dobrze, ale trochę za głośno w trybie gamingowym
-5	5	5	Bardzo zadowolony, szybki i niezawodny!
-6	6	4	Dobry laptop, ale ma mało portów USB
-7	7	5	Jakość obrazu jest niesamowita, polecam!
-\.
+INSERT INTO public.recenzje VALUES (1, 1, '5', 'Świetny telefon, bardzo szybki!');
+INSERT INTO public.recenzje VALUES (2, 2, '4', 'Bardzo dobra jakość, ale mógłby być tańszy');
+INSERT INTO public.recenzje VALUES (3, 3, '5', 'Fantastyczny obraz, uwielbiam ten telewizor!');
+INSERT INTO public.recenzje VALUES (4, 4, '3', 'Działa dobrze, ale trochę za głośno w trybie gamingowym');
+INSERT INTO public.recenzje VALUES (5, 5, '5', 'Bardzo zadowolony, szybki i niezawodny!');
+INSERT INTO public.recenzje VALUES (6, 6, '4', 'Dobry laptop, ale ma mało portów USB');
+INSERT INTO public.recenzje VALUES (7, 7, '5', 'Jakość obrazu jest niesamowita, polecam!');
 
 
 --
@@ -399,15 +390,13 @@ COPY public.recenzje (idklienta, idproduktu, ocena, komentarz) FROM stdin;
 -- Data for Name: serwis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.serwis (idpracownika, idproduktu, nazwa_produktu, rozpoczecie, zakonczenie, kwota_brutto_pln) FROM stdin;
-1	1	iPhone 13	2025-10-01	2025-10-05	150.00
-2	2	Dell XPS 13	2025-10-02	2025-10-06	200.00
-3	3	Samsung QLED TV	2025-10-03	2025-10-07	300.00
-4	4	PS5	2025-10-04	2025-10-08	100.00
-5	5	Samsung Galaxy S21	2025-10-05	2025-10-09	120.00
-6	6	Lenovo ThinkPad	2025-10-06	2025-10-10	250.00
-7	7	LG OLED TV	2025-10-07	2025-10-11	400.00
-\.
+INSERT INTO public.serwis VALUES (1, 1, 'iPhone 13', '2025-10-01', '2025-10-05', 150.00);
+INSERT INTO public.serwis VALUES (2, 2, 'Dell XPS 13', '2025-10-02', '2025-10-06', 200.00);
+INSERT INTO public.serwis VALUES (3, 3, 'Samsung QLED TV', '2025-10-03', '2025-10-07', 300.00);
+INSERT INTO public.serwis VALUES (4, 4, 'PS5', '2025-10-04', '2025-10-08', 100.00);
+INSERT INTO public.serwis VALUES (5, 5, 'Samsung Galaxy S21', '2025-10-05', '2025-10-09', 120.00);
+INSERT INTO public.serwis VALUES (6, 6, 'Lenovo ThinkPad', '2025-10-06', '2025-10-10', 250.00);
+INSERT INTO public.serwis VALUES (7, 7, 'LG OLED TV', '2025-10-07', '2025-10-11', 400.00);
 
 
 --
@@ -416,15 +405,13 @@ COPY public.serwis (idpracownika, idproduktu, nazwa_produktu, rozpoczecie, zakon
 -- Data for Name: zamowienia; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.zamowienia (idzamowienia, idklienta, idproduktu, data_zamowienia) FROM stdin;
-1	1	1	2025-11-01
-2	2	2	2025-11-02
-3	3	3	2025-11-03
-4	4	4	2025-11-04
-5	5	5	2025-11-05
-6	6	6	2025-11-06
-7	7	7	2025-11-07
-\.
+INSERT INTO public.zamowienia VALUES (1, 1, 1, '2025-11-01');
+INSERT INTO public.zamowienia VALUES (2, 2, 2, '2025-11-02');
+INSERT INTO public.zamowienia VALUES (3, 3, 3, '2025-11-03');
+INSERT INTO public.zamowienia VALUES (4, 4, 4, '2025-11-04');
+INSERT INTO public.zamowienia VALUES (5, 5, 5, '2025-11-05');
+INSERT INTO public.zamowienia VALUES (6, 6, 6, '2025-11-06');
+INSERT INTO public.zamowienia VALUES (7, 7, 7, '2025-11-07');
 
 
 --
@@ -647,11 +634,9 @@ GRANT SELECT ON TABLE public.slabe_opinie TO worker;
 GRANT SELECT,INSERT ON TABLE public.zamowienia TO worker;
 
 
--- Completed on 2025-11-06 14:23:06
+-- Completed on 2025-11-12 08:28:12
 
 --
 -- PostgreSQL database dump complete
 --
-
-\unrestrict G3uYlaaaXLkFc83Ih2QIifJ3JuZ6LBMjNFg8deRAZMcMLrUAa20Dkbo1Vn2kb4a
 
