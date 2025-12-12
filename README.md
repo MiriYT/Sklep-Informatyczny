@@ -20,13 +20,13 @@ postgres-może wszystko, jest administratorem bazy; <br>
 Baza idealnie może wpasować się w sklep informatyczny, jest elastyczna poprzez prostotę, relacje oraz sens tabel. <br>
 Utworzenie strony HTML do której podepniemy możliwość logowania się oraz wprowadzania danych daje idealnie połączenie dla interesantów jak i samych pracowników do klarownego wprowadzania danych.<br>
 <br>
-UPDATE
+UPDATE <br>
 <br>
 Została dodana strona w języku php która pokazuje przykładowe możliwości takiej bazy oraz jej przydatnośc do jakiegoś prostego sklepu informatycznego, można ją rozbudować dzięki przypisanym typom danych.<br>
 Strona nie posiada wybitnego css jednak celem było pokazanie poprawności składni php która to pobiera bądź przesyła dane z bazy Postgres.<br>
 Dla 100% że wszystko zadziała baze należy otworzyc w postgres(PgAdmin4) i nazwać "Sklep_informatyczny".<br>
 <br>
-UPDATE
+UPDATE<br>
 <br>
 Został dodany film w którym pokazana jest baza w postgresql zainstalowana na konsolowym debianie, następnie widać na graficznym systemie jak backup wykonywany jest z maszyny na maszyne, film ma na celu pokazanie<br>
 jak proste jest zrobienie zabezpieczenia. W przypadku kiedy serwer padnie mamy backup z dnia poprzedniego(w moim przykładzie), a gdy padnie maszyna służąca za backup mamy serwer z którego jak najszybciej trzeba zrobić zapis.<br>
