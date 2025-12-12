@@ -13,9 +13,9 @@ Widok pracownik_od_komputerow pokazuje pracowników którzy zajmują się napraw
 Widok slabe_opinie pokazuje oceny klientów <=3; <br>
 <br>
 Baza posiada trzech użytkowników: <br>
-worker-Pracownik który może usuwać, tworzyc, edytować oraz kasować dane aczkolwiek zależy od wymagań tabeli; <br>
-client- większość tabel może przeglądać za wyjątkiem takich z danymi wrażliwymi(np: pracownicy) oraz ma możliwość wpisywania recenzji; <br>
-postgres-może wszystko, jest administratorem bazy; <br>
+worker - Pracownik który może usuwać, tworzyc, edytować oraz kasować dane aczkolwiek zależy od wymagań tabeli; <br>
+client - większość tabel może przeglądać za wyjątkiem takich z danymi wrażliwymi(np: pracownicy) oraz ma możliwość wpisywania recenzji; <br>
+postgres - może wszystko, jest administratorem bazy; <br>
 <br>
 Baza idealnie może wpasować się w sklep informatyczny, jest elastyczna poprzez prostotę, relacje oraz sens tabel. <br>
 Utworzenie strony HTML do której podepniemy możliwość logowania się oraz wprowadzania danych daje idealnie połączenie dla interesantów jak i samych pracowników do klarownego wprowadzania danych.<br>
